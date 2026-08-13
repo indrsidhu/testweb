@@ -345,6 +345,13 @@ DOCTORS = [
     {"slug": "dr-jayanti-jain", "name": "Dr. Jayanti Jain", "role": "Dermatology", "dept": "dermatology", "edu": "Dermatology", "bio": "Dermatologist specialising in acne, eczema, hair loss, and pigmentation."},
     {"slug": "dr-vimal", "name": "Dr. Vimal", "role": "General Surgery", "dept": "bariatric-surgery", "edu": "MBBS, MS General Surgery", "bio": "General surgeon supporting laparoscopic and open surgical care."},
     {"slug": "dr-virender-dhankar", "name": "Dr. Virender Dhankar", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant physician", "bio": "Consultant on the CHD City Hospital faculty, providing specialist clinical care as part of the multidisciplinary team."},
+    {"slug": "dr-arpit-kakkar", "name": "Dr. Arpit Kakkar", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Listed on the CHD City Hospital specialist faculty. Book an appointment to confirm clinic days and the right department for your concern."},
+    {"slug": "dr-shivam-sood", "name": "Dr. Shivam Sood", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Member of the hospital’s visiting specialist panel, supporting multidisciplinary care in Chandigarh."},
+    {"slug": "dr-mantaz-kaur-dhillon", "name": "Dr. Mantaz Kaur Dhillon", "role": "Consultant", "dept": "obstetrics-gynaecology", "edu": "Consultant", "bio": "Listed among CHD City Hospital specialists. Call the appointment desk for current OPD timing."},
+    {"slug": "dr-manish-chhabra", "name": "Dr. Manish Chhabra", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Part of the hospital’s consultant faculty. The front desk can route you to the correct specialty clinic."},
+    {"slug": "dr-saurav-sarkar", "name": "Dr. Saurav Sarkar", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Consultant on the published CHD City Hospital doctors list. Confirm availability when you request an appointment."},
+    {"slug": "dr-maninder-singh-ahluwalia", "name": "Dr. Maninder Singh Ahluwalia", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Specialist faculty member at CHD City Hospital, Chandigarh."},
+    {"slug": "dr-neha-chauhan", "name": "Dr. Neha Chauhan", "role": "Consultant", "dept": "internal-medicine", "edu": "Consultant", "bio": "Listed on the hospital’s doctors page. Ask the coordinator for the matching department and next OPD slot."},
 ]
 
 BLOGS = [
@@ -363,6 +370,11 @@ BLOGS = [
     {"slug": "heart-specialist-chandigarh", "title": "How to Know When You Need a Heart Specialist", "date": "2026-04-10", "dept": "cardiology", "summary": "Chest discomfort, breathlessness on mild effort, or a strong family history of heart disease should trigger an ECG and cardiology opinion."},
     {"slug": "neurology-migraine-stroke", "title": "Expert Care for Migraine and Stroke", "date": "2026-04-02", "dept": "neurology", "summary": "Sudden weakness, speech change, or the worst headache of your life is an emergency. Recurrent migraine also deserves a neurologist, not only painkillers."},
     {"slug": "dermatologist-skin-hair", "title": "When to Visit a Dermatologist for Skin and Hair Problems", "date": "2026-03-25", "dept": "dermatology", "summary": "Acne that scars, sudden hair fall, or rashes that do not settle with home care are reasons to see a skin specialist."},
+    {"slug": "best-orthopedic-doctor-panchkula", "title": "Who Is the Right Orthopaedic Doctor for Knee and Joint Pain?", "date": "2026-03-18", "dept": "orthopaedics", "summary": "Knee and joint pain that lasts beyond rest deserves a named orthopaedic review. Look for joint-replacement and sports-injury experience, not only a nearby clinic."},
+    {"slug": "best-dentist-panchkula", "title": "Common Dental Problems and Where to Get Treatment", "date": "2026-03-12", "dept": "dentistry", "summary": "Tooth pain, bleeding gums, and broken teeth should be seen promptly. CHD City Hospital dentistry covers check-ups, root canal, implants, and paediatric visits."},
+    {"slug": "online-vs-clinic-psychiatry", "title": "Online vs In-Clinic Psychiatric Consultation", "date": "2026-03-05", "dept": "psychiatry", "summary": "Video follow-up can help with medication reviews. First assessments, child psychiatry, and crisis care are usually better in person at the hospital."},
+    {"slug": "cardiology-hospitals-heart-care", "title": "Cardiology Care for Heart Symptoms in Chandigarh", "date": "2026-02-26", "dept": "cardiology", "summary": "A hospital with ECG, medical cardiology, and ICU backup is the safer place for chest pain than a standalone clinic."},
+    {"slug": "advanced-medical-care-chandigarh", "title": "Choosing a Hospital for Advanced Medical Care", "date": "2026-02-18", "dept": "critical-care", "summary": "Advanced care means ICU, HDU, a modular OT, and specialists who talk to each other. That is the model at this 25-bed NABH hospital."},
 ]
 
 REVIEWS = [
@@ -393,19 +405,23 @@ def header(depth: int, active: str) -> str:
         return f'<a href="{p}{href}" class="{cls}">{label}</a>'
 
     return f"""
-  <div class="bg-slate-900 text-slate-100 text-sm">
+  <div class="bg-slate-900 text-slate-100 text-xs sm:text-sm">
     <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
-      <p>NABH accredited · 24×7 emergency · Sector 8C, Chandigarh</p>
-      <p class="flex flex-wrap gap-4">
+      <p class="truncate">NABH · 24×7 emergency · Chandigarh</p>
+      <p class="flex flex-wrap gap-x-4 gap-y-1">
         <a class="hover:text-white" href="{PHONE_HREF}">{PHONE}</a>
-        <a class="hover:text-white" href="{APPT_HREF}">Appointments {APPT}</a>
+        <a class="hover:text-white hidden sm:inline" href="{APPT_HREF}">Appointments {APPT}</a>
       </p>
     </div>
   </div>
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-      <a href="{p}index.html" class="flex items-center gap-3 min-w-0">
-        <img src="{p}assets/logo.svg" alt="CHD City Hospital" class="h-12 w-auto">
+      <a href="{p}index.html" class="flex items-center gap-2 min-w-0">
+        <img src="{p}assets/mark.svg" alt="" class="h-10 w-10 shrink-0">
+        <span class="min-w-0">
+          <span class="block truncate text-sm sm:text-base font-extrabold text-slate-900 leading-tight">CHD City Hospital</span>
+          <span class="hidden sm:block text-[11px] font-semibold text-teal-800">NABH · Sector 8C, Chandigarh</span>
+        </span>
       </a>
       <nav class="hidden lg:flex items-center gap-6 text-sm">
         {nav("home", "index.html", "Home")}
@@ -447,7 +463,10 @@ def footer(depth: int) -> str:
   <footer class="bg-slate-950 text-slate-300 mt-20">
     <div class="mx-auto max-w-7xl px-4 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <img src="{p}assets/logo.svg" alt="" class="h-10 mb-4 brightness-0 invert">
+        <div class="flex items-center gap-2 mb-4">
+          <img src="{p}assets/mark.svg" alt="" class="h-9 w-9">
+          <span class="font-bold text-white">CHD City Hospital</span>
+        </div>
         <p class="text-sm leading-relaxed">CHD City Hospital LLP is a 25-bed NABH accredited hospital in Sector 8C, Chandigarh, owned and run by specialist doctors. Values: Expertise, Ethics and Empathy.</p>
       </div>
       <div>
@@ -470,6 +489,10 @@ def footer(depth: int) -> str:
           <li><a class="hover:text-white" href="{p}testimonials/index.html">Patient stories</a></li>
           <li><a class="hover:text-white" href="{p}privacy/index.html">Privacy policy</a></li>
           <li><a class="hover:text-white" href="{p}appointment/index.html">Request an appointment</a></li>
+          <li><a class="hover:text-white" href="{p}treatments/laser-kidney-stone/index.html">Laser kidney stone</a></li>
+          <li><a class="hover:text-white" href="{p}treatments/orthopaedic-surgeon/index.html">Orthopaedic surgeon</a></li>
+          <li><a class="hover:text-white" href="{p}billing/index.html">Billing &amp; insurance</a></li>
+          <li><a class="hover:text-white" href="{p}forms/index.html">Online forms</a></li>
         </ul>
       </div>
     </div>
@@ -477,7 +500,7 @@ def footer(depth: int) -> str:
       © 2026 CHD City Hospital · Sector 8C, Chandigarh · Redesigned independently from public website content.
     </div>
   </footer>
-  <a href="{WHATSAPP}" class="fixed bottom-5 right-5 z-50 rounded-full bg-emerald-500 text-white shadow-lg px-4 py-3 text-sm font-semibold hover:bg-emerald-600">WhatsApp</a>
+  <a href="{WHATSAPP}" class="fixed bottom-4 right-4 z-50 rounded-full bg-emerald-500 text-white shadow-lg px-4 py-3 text-sm font-semibold hover:bg-emerald-600">WhatsApp</a>
   <script>
     document.querySelectorAll("[data-menu-btn]").forEach((btn) => {{
       btn.addEventListener("click", () => {{
@@ -497,25 +520,13 @@ def shell(title: str, description: str, depth: int, active: str, body: str) -> s
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(description)}">
-  <link rel="icon" href="{p}assets/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          fontFamily: {{ sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"] }}
-        }}
-      }}
-    }};
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="{p}assets/mark.svg">
+  <link rel="stylesheet" href="{p}assets/app.css">
   <style>
-    body {{ font-family: "Plus Jakarta Sans", system-ui, sans-serif; }}
+    body {{ font-family: ui-sans-serif, system-ui, sans-serif; }}
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden pb-16">
 {header(depth, active)}
 {body}
 {footer(depth)}
@@ -559,10 +570,10 @@ def home():
     )
     body = f"""
   <section class="relative overflow-hidden bg-gradient-to-br from-teal-900 via-slate-900 to-slate-950 text-white">
-    <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       <div>
         <p class="text-teal-200 font-semibold tracking-wide uppercase text-xs">NABH accredited · 21+ specialties</p>
-        <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Find the care you need at CHD City Hospital</h1>
+        <h1 class="mt-3 text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Find the care you need at CHD City Hospital</h1>
         <p class="mt-5 text-lg text-slate-200 max-w-xl">A doctor-led hospital in the heart of Chandigarh. ICU, HDU, modular OT, private rooms, and a faculty known for orthopaedics, laparoscopy, maternity, and urology.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="appointment/index.html" class="rounded-full bg-teal-400 text-slate-950 px-6 py-3 font-semibold hover:bg-teal-300">Request a callback</a>
@@ -582,14 +593,14 @@ def home():
       </div>
     </div>
   </section>
-  <section class="mx-auto max-w-7xl px-4 -mt-8 grid sm:grid-cols-3 gap-4">
+  <section class="mx-auto max-w-7xl px-4 mt-4 sm:-mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
     <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">25</p><p class="text-sm text-slate-600">Beds with ICU, HDU, wards and private rooms</p></div>
     <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">21+</p><p class="text-sm text-slate-600">Clinical specialties in one multidisciplinary setting</p></div>
     <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">4.9</p><p class="text-sm text-slate-600">Google rating from 250+ patient reviews</p></div>
   </section>
   <section class="mx-auto max-w-7xl px-4 py-16">
-    <div class="flex items-end justify-between gap-4 mb-8">
-      <div><h2 class="text-3xl font-bold text-slate-900">Departments</h2><p class="text-slate-600 mt-1">Integrated medical and surgical care close to home.</p></div>
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+      <div><h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Departments</h2><p class="text-slate-600 mt-1">Integrated medical and surgical care close to home.</p></div>
       <a href="departments/index.html" class="text-teal-800 font-semibold">All departments</a>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">{cards}</div>
@@ -606,8 +617,8 @@ def home():
     </div>
   </section>
   <section class="mx-auto max-w-7xl px-4 py-16">
-    <div class="flex items-end justify-between mb-8">
-      <h2 class="text-3xl font-bold">Our doctors</h2>
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Our doctors</h2>
       <a href="doctors/index.html" class="text-teal-800 font-semibold">Meet the team</a>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">{docs}</div>
@@ -812,10 +823,71 @@ def appointment():
 def simple(path, title, desc, active, heading, paragraphs, depth=1):
     paras = "".join(f"<p class='text-slate-700 leading-relaxed'>{esc(p)}</p>" for p in paragraphs)
     body = f"""
-  <section class="bg-slate-900 text-white py-14"><div class="mx-auto max-w-7xl px-4"><h1 class="text-4xl font-extrabold">{esc(heading)}</h1></div></section>
+  <section class="bg-slate-900 text-white py-10 sm:py-14"><div class="mx-auto max-w-7xl px-4"><h1 class="text-3xl sm:text-4xl font-extrabold">{esc(heading)}</h1></div></section>
   <section class="mx-auto max-w-3xl px-4 py-12 space-y-4">{paras}</section>
 """
     write(path, shell(title, desc, depth, active, body))
+
+
+def extra_pages():
+    simple(
+        "treatments/laser-kidney-stone/index.html",
+        "Laser Kidney Stone Treatment | CHD City Hospital",
+        "Advanced laser kidney stone treatment with experienced urologists in Chandigarh.",
+        "departments",
+        "Laser kidney stone treatment",
+        [
+            "CHD City Hospital offers advanced laser kidney stone treatment using modern technology. The procedure is highly precise, reduces the risk of complications, and is personalised by experienced urologists.",
+            "Why removal matters: it relieves severe pain, prevents blockages that can damage the kidney, helps find the cause so stones are less likely to return, and restores normal urinary function.",
+            "Care is usually planned as a short-stay pathway in a safe recovery environment, with RIRS, PCNL, and Thulium laser options discussed after imaging.",
+            "Fill the appointment form or call +91 7508008115 for a free consultation with the urology team.",
+        ],
+        depth=2,
+    )
+    simple(
+        "treatments/orthopaedic-surgeon/index.html",
+        "Orthopaedic Surgeon | CHD City Hospital",
+        "Consult Dr. M. S. Narula and the orthopaedic team for joints, trauma, and spine.",
+        "departments",
+        "Orthopaedic surgeon",
+        [
+            "Dr. M. S. Narula is a leading orthopaedic surgeon in Chandigarh with over 20 years of experience in trauma, joint replacement, spine disease, and sports injuries using minimally invasive techniques.",
+            "He has performed over 2,000 successful joint replacement and spine surgeries and is a visiting surgeon at New Yorkshire hospitals, UK. His 5E philosophy: Ethical, Efficient and Empathetic care backed by Experience and Expertise.",
+            "The department is equipped for advanced surgery, personalised plans, and a safe recovery environment — from outpatient procedures to major replacement.",
+            "Request a callback for a free orthopaedic consultation.",
+        ],
+        depth=2,
+    )
+    simple(
+        "billing/index.html",
+        "Billing & Insurance | CHD City Hospital",
+        "How to pay, claim insurance, and estimate packages at CHD City Hospital.",
+        "about",
+        "Billing and insurance",
+        [
+            "CHD City Hospital accepts health insurance from most major Indian carriers for eligible admissions. Cashless availability depends on your policy and TPA approval, so bring your card and a photo ID.",
+            "Ask the billing desk for an estimate before surgery. Laparoscopic gallbladder stone removal is published from Rs. 32,000 including pre-operative investigations.",
+            "OPD consultation, investigations, medicines, and room category are billed separately unless a package says otherwise.",
+            "For billing questions call +91 9644000067 or visit SCO 10-11, Sector 8C.",
+        ],
+    )
+    simple(
+        "forms/index.html",
+        "Online Forms | CHD City Hospital",
+        "Forms to complete before your appointment at CHD City Hospital.",
+        "contact",
+        "Online forms",
+        [
+            "Please review these items before you see a physician. You can complete the same information through the appointment request page or at the front desk.",
+            "Visitor screening checklist — share recent illness or travel if asked at the gate.",
+            "New patient enrollment — name, phone, address, and emergency contact.",
+            "Medical history form — medicines, allergies, previous surgeries.",
+            "Online doctor appointment form — department and preferred time.",
+            "Psychiatric evaluation form — for mental-health first visits, in confidence.",
+            "Emergency contact and medical release forms — for admission or procedures.",
+            "Use Request an appointment to send details digitally, or arrive 15 minutes early with reports.",
+        ],
+    )
 
 
 def faq():
@@ -925,6 +997,7 @@ def main():
             </section>""",
         ),
     )
+    extra_pages()
     print("Wrote site under", ROOT)
 
 

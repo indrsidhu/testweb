@@ -5,39 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Preeti Sharma | Pulmonology</title>
   <meta name="description" content="Pulmonologist with 12+ years of experience and membership of the Indian Society of Critical Care Medicine.">
-  <link rel="icon" href="../../assets/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"] }
-        }
-      }
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../assets/mark.svg">
+  <link rel="stylesheet" href="../../assets/app.css">
   <style>
-    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
+    body { font-family: ui-sans-serif, system-ui, sans-serif; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden pb-16">
 
-  <div class="bg-slate-900 text-slate-100 text-sm">
+  <div class="bg-slate-900 text-slate-100 text-xs sm:text-sm">
     <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
-      <p>NABH accredited · 24×7 emergency · Sector 8C, Chandigarh</p>
-      <p class="flex flex-wrap gap-4">
+      <p class="truncate">NABH · 24×7 emergency · Chandigarh</p>
+      <p class="flex flex-wrap gap-x-4 gap-y-1">
         <a class="hover:text-white" href="tel:+919644000067">+91 9644000067</a>
-        <a class="hover:text-white" href="tel:+917508008115">Appointments +91 7508008115</a>
+        <a class="hover:text-white hidden sm:inline" href="tel:+917508008115">Appointments +91 7508008115</a>
       </p>
     </div>
   </div>
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
-      <a href="../../index.html" class="flex items-center gap-3 min-w-0">
-        <img src="../../assets/logo.svg" alt="CHD City Hospital" class="h-12 w-auto">
+      <a href="../../index.html" class="flex items-center gap-2 min-w-0">
+        <img src="../../assets/mark.svg" alt="" class="h-10 w-10 shrink-0">
+        <span class="min-w-0">
+          <span class="block truncate text-sm sm:text-base font-extrabold text-slate-900 leading-tight">CHD City Hospital</span>
+          <span class="hidden sm:block text-[11px] font-semibold text-teal-800">NABH · Sector 8C, Chandigarh</span>
+        </span>
       </a>
       <nav class="hidden lg:flex items-center gap-6 text-sm">
         <a href="../../index.html" class="text-slate-600 hover:text-teal-800">Home</a>
@@ -84,7 +76,10 @@
   <footer class="bg-slate-950 text-slate-300 mt-20">
     <div class="mx-auto max-w-7xl px-4 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div>
-        <img src="../../assets/logo.svg" alt="" class="h-10 mb-4 brightness-0 invert">
+        <div class="flex items-center gap-2 mb-4">
+          <img src="../../assets/mark.svg" alt="" class="h-9 w-9">
+          <span class="font-bold text-white">CHD City Hospital</span>
+        </div>
         <p class="text-sm leading-relaxed">CHD City Hospital LLP is a 25-bed NABH accredited hospital in Sector 8C, Chandigarh, owned and run by specialist doctors. Values: Expertise, Ethics and Empathy.</p>
       </div>
       <div>
@@ -114,6 +109,10 @@
           <li><a class="hover:text-white" href="../../testimonials/index.html">Patient stories</a></li>
           <li><a class="hover:text-white" href="../../privacy/index.html">Privacy policy</a></li>
           <li><a class="hover:text-white" href="../../appointment/index.html">Request an appointment</a></li>
+          <li><a class="hover:text-white" href="../../treatments/laser-kidney-stone/index.html">Laser kidney stone</a></li>
+          <li><a class="hover:text-white" href="../../treatments/orthopaedic-surgeon/index.html">Orthopaedic surgeon</a></li>
+          <li><a class="hover:text-white" href="../../billing/index.html">Billing &amp; insurance</a></li>
+          <li><a class="hover:text-white" href="../../forms/index.html">Online forms</a></li>
         </ul>
       </div>
     </div>
@@ -121,7 +120,7 @@
       © 2026 CHD City Hospital · Sector 8C, Chandigarh · Redesigned independently from public website content.
     </div>
   </footer>
-  <a href="https://wa.me/919644000067" class="fixed bottom-5 right-5 z-50 rounded-full bg-emerald-500 text-white shadow-lg px-4 py-3 text-sm font-semibold hover:bg-emerald-600">WhatsApp</a>
+  <a href="https://wa.me/919644000067" class="fixed bottom-4 right-4 z-50 rounded-full bg-emerald-500 text-white shadow-lg px-4 py-3 text-sm font-semibold hover:bg-emerald-600">WhatsApp</a>
   <script>
     document.querySelectorAll("[data-menu-btn]").forEach((btn) => {
       btn.addEventListener("click", () => {
