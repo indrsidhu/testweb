@@ -3,211 +3,332 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
+  <title>CHD City Hospital | Best Private Hospital in Chandigarh</title>
+  <meta name="description" content="NABH accredited 25-bed multidisciplinary hospital in Sector 8C, Chandigarh.">
+  <link rel="icon" href="assets/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"] }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: #334155;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .logo img {
-      display: block;
-      height: 32px;
-      width: auto;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.25rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      color: var(--text);
-    }
-
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .hero {
-      padding: 3rem 0 4rem;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-    }
-
-    .lede {
-      margin-top: 1rem;
-      max-width: 36rem;
-      font-size: 1.2rem;
-      color: var(--muted);
-    }
-
-    .meta {
-      margin-top: 1.5rem;
-      color: var(--accent);
-      font-size: 0.95rem;
-    }
-
-    section {
-      margin-top: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-    }
-
-    p + p {
-      margin-top: 0.85rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    article {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-    }
-
-    article h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-
-    article p,
-    .muted {
-      color: var(--muted);
-    }
-
-    footer {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
   </style>
 </head>
-<body>
-  <header>
-    <a class="logo" href="./">
-      <img src="logo.svg" alt="MyWeb" width="148" height="36">
-    </a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#notes">Notes</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <div class="bg-slate-900 text-slate-100 text-sm">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+      <p>NABH accredited · 24×7 emergency · Sector 8C, Chandigarh</p>
+      <p class="flex flex-wrap gap-4">
+        <a class="hover:text-white" href="tel:+919644000067">+91 9644000067</a>
+        <a class="hover:text-white" href="tel:+917508008115">Appointments +91 7508008115</a>
+      </p>
+    </div>
+  </div>
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 min-w-0">
+        <img src="assets/logo.svg" alt="CHD City Hospital" class="h-12 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm">
+        <a href="index.html" class="text-teal-800 font-semibold">Home</a>
+        <a href="about/index.html" class="text-slate-600 hover:text-teal-800">About</a>
+        <a href="departments/index.html" class="text-slate-600 hover:text-teal-800">Departments</a>
+        <a href="doctors/index.html" class="text-slate-600 hover:text-teal-800">Doctors</a>
+        <a href="blog/index.html" class="text-slate-600 hover:text-teal-800">Health Guide</a>
+        <a href="contact/index.html" class="text-slate-600 hover:text-teal-800">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="appointment/index.html" class="hidden sm:inline-flex rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-800">Book appointment</a>
+        <button type="button" data-menu-btn class="lg:hidden rounded-md border border-slate-300 p-2" aria-label="Open menu">
+          <span class="block w-5 h-0.5 bg-slate-800 mb-1"></span>
+          <span class="block w-5 h-0.5 bg-slate-800 mb-1"></span>
+          <span class="block w-5 h-0.5 bg-slate-800"></span>
+        </button>
+      </div>
+    </div>
+    <div data-menu class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3 text-sm">
+      <a class="block" href="index.html">Home</a>
+      <a class="block" href="about/index.html">About</a>
+      <a class="block" href="departments/index.html">Departments</a>
+      <a class="block" href="doctors/index.html">Doctors</a>
+      <a class="block" href="blog/index.html">Health Guide</a>
+      <a class="block" href="contact/index.html">Contact</a>
+      <a class="block font-semibold text-teal-800" href="appointment/index.html">Book appointment</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Hello World</h1>
-      <p class="lede">A small standalone site with a few pages of content, served as static files. No build step, no frameworks, just HTML.</p>
-      <p class="meta" id="greeting">Welcome.</p>
-    </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>This page is a simple public homepage. It is a single HTML file with inline styles, so it can be opened locally or deployed as static assets.</p>
-      <p>The layout stays readable on a phone or a desktop, and the copy is here so the site is more than a one-line heading.</p>
-    </section>
-
-    <section id="notes">
-      <h2>What is here</h2>
-      <div class="cards">
-        <article>
-          <h3>Standalone HTML</h3>
-          <p>One file, no JavaScript build, no extra CSS files. Open it in a browser and it works.</p>
-        </article>
-        <article>
-          <h3>Static deploy</h3>
-          <p>Cloudflare Workers serves the files from the <code>public</code> folder through Wrangler.</p>
-        </article>
-        <article>
-          <h3>Room to grow</h3>
-          <p>Add more pages next to this one, or keep expanding this file if a single page is enough.</p>
-        </article>
+  <section class="relative overflow-hidden bg-gradient-to-br from-teal-900 via-slate-900 to-slate-950 text-white">
+    <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-teal-200 font-semibold tracking-wide uppercase text-xs">NABH accredited · 21+ specialties</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Find the care you need at CHD City Hospital</h1>
+        <p class="mt-5 text-lg text-slate-200 max-w-xl">A doctor-led hospital in the heart of Chandigarh. ICU, HDU, modular OT, private rooms, and a faculty known for orthopaedics, laparoscopy, maternity, and urology.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="appointment/index.html" class="rounded-full bg-teal-400 text-slate-950 px-6 py-3 font-semibold hover:bg-teal-300">Request a callback</a>
+          <a href="departments/index.html" class="rounded-full border border-white/30 px-6 py-3 font-semibold hover:bg-white/10">Browse departments</a>
+        </div>
       </div>
-    </section>
+      <div class="rounded-3xl bg-white/10 backdrop-blur p-6 ring-1 ring-white/15">
+        <p class="text-teal-200 text-sm font-semibold">Featured package</p>
+        <h2 class="text-2xl font-bold mt-2">Laparoscopic gallbladder stone removal</h2>
+        <p class="mt-2 text-3xl font-extrabold">₹32,000</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-100">
+          <li>Includes pre-operative investigations</li>
+          <li>Minimal incision · less pain · quicker recovery</li>
+          <li>Free consultation with the gallstone team</li>
+        </ul>
+        <a href="tel:+917508008115" class="mt-6 inline-flex rounded-full bg-white text-slate-900 px-5 py-2.5 font-semibold">Call +91 7508008115</a>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-7xl px-4 -mt-8 grid sm:grid-cols-3 gap-4">
+    <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">25</p><p class="text-sm text-slate-600">Beds with ICU, HDU, wards and private rooms</p></div>
+    <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">21+</p><p class="text-sm text-slate-600">Clinical specialties in one multidisciplinary setting</p></div>
+    <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-bold text-teal-800">4.9</p><p class="text-sm text-slate-600">Google rating from 250+ patient reviews</p></div>
+  </section>
+  <section class="mx-auto max-w-7xl px-4 py-16">
+    <div class="flex items-end justify-between gap-4 mb-8">
+      <div><h2 class="text-3xl font-bold text-slate-900">Departments</h2><p class="text-slate-600 mt-1">Integrated medical and surgical care close to home.</p></div>
+      <a href="departments/index.html" class="text-teal-800 font-semibold">All departments</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="departments/internal-medicine/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Internal Medicine &amp; Rheumatology</h3>
+          <p class="mt-2 text-sm text-slate-600">Diagnosis and long-term care for infections, diabetes, hypertension, arthritis, and autoimmune disease.</p>
+        </a>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="muted">This is a demo page, so there is no form yet. If you are looking at a live deploy, you found the right place.</p>
-    </section>
-  </main>
+        <a href="departments/bariatric-surgery/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Minimal Access &amp; Bariatric Surgery</h3>
+          <p class="mt-2 text-sm text-slate-600">Laparoscopic weight-loss and GI surgery with faster recovery and smaller incisions.</p>
+        </a>
 
-  <footer>
-    <p>Hello World · a standalone HTML page</p>
+        <a href="departments/orthopaedics/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Orthopaedics, Joints &amp; Spine</h3>
+          <p class="mt-2 text-sm text-slate-600">Joint replacement, trauma, sports injury, and spine care with rehabilitation support.</p>
+        </a>
+
+        <a href="departments/obstetrics-gynaecology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Obstetrics &amp; Gynaecology</h3>
+          <p class="mt-2 text-sm text-slate-600">Pregnancy, delivery, fertility, and laparoscopic gynaecology across every stage of life.</p>
+        </a>
+
+        <a href="departments/urology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Urology</h3>
+          <p class="mt-2 text-sm text-slate-600">Laser kidney stone, prostate, bladder, infertility, and paediatric urology care.</p>
+        </a>
+
+        <a href="departments/ent/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">ENT</h3>
+          <p class="mt-2 text-sm text-slate-600">Ear, nose, and throat care including sinus surgery, hearing, and cochlear implants.</p>
+        </a>
+
+        <a href="departments/endocrinology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Endocrinology</h3>
+          <p class="mt-2 text-sm text-slate-600">Diabetes, thyroid, PCOS, and hormone disorders with long-term follow-up.</p>
+        </a>
+
+        <a href="departments/radiology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Radiology</h3>
+          <p class="mt-2 text-sm text-slate-600">X-ray, ultrasound, and coordinated CT, MRI, and image-guided diagnostics.</p>
+        </a>
+
+        <a href="departments/paediatrics/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Paediatrics</h3>
+          <p class="mt-2 text-sm text-slate-600">Newborn, child, and adolescent care with PICU and neonatal support.</p>
+        </a>
+
+        <a href="departments/cardiology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Cardiology</h3>
+          <p class="mt-2 text-sm text-slate-600">Heart evaluation, medical cardiology, and coordinated advanced heart care.</p>
+        </a>
+
+        <a href="departments/physiotherapy/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Physiotherapy</h3>
+          <p class="mt-2 text-sm text-slate-600">Rehab after joint, spine, and sports injury, plus pain and mobility programmes.</p>
+        </a>
+
+        <a href="departments/dentistry/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Dentistry</h3>
+          <p class="mt-2 text-sm text-slate-600">Family dentistry, implants, braces, paediatric dentistry, and oral surgery.</p>
+        </a>
+
+        <a href="departments/dermatology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Dermatology</h3>
+          <p class="mt-2 text-sm text-slate-600">Medical, paediatric, and cosmetic care for skin, hair, and nails.</p>
+        </a>
+
+        <a href="departments/nephrology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Nephrology</h3>
+          <p class="mt-2 text-sm text-slate-600">Kidney disease, dialysis support, and coordinated urology care.</p>
+        </a>
+
+        <a href="departments/critical-care/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Critical Care Medicine</h3>
+          <p class="mt-2 text-sm text-slate-600">ICU and HDU support for seriously ill medical and surgical patients.</p>
+        </a>
+
+        <a href="departments/psychiatry/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Psychiatry</h3>
+          <p class="mt-2 text-sm text-slate-600">Confidential care for anxiety, depression, stress, and child &amp; adolescent mental health.</p>
+        </a>
+
+        <a href="departments/neurology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Neurology</h3>
+          <p class="mt-2 text-sm text-slate-600">Stroke, migraine, epilepsy, Parkinson’s, and coordinated neurosurgery.</p>
+        </a>
+
+        <a href="departments/pathology/index.html" class="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 hover:shadow-md hover:ring-teal-200 transition">
+          <h3 class="font-semibold text-slate-900 group-hover:text-teal-800">Pathology</h3>
+          <p class="mt-2 text-sm text-slate-600">Laboratory diagnostics that support every department’s treatment decisions.</p>
+        </a></div>
+  </section>
+  <section class="bg-white py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl font-bold text-slate-900">Why patients choose us</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold">More experience</h3><p class="text-sm text-slate-600 mt-2">Be confident in the treatment plan and your doctor’s abilities.</p></div>
+        <div><h3 class="font-semibold">The right answers</h3><p class="text-sm text-slate-600 mt-2">Get answers and assurance with accuracy you can trust.</p></div>
+        <div><h3 class="font-semibold">Seamless care</h3><p class="text-sm text-slate-600 mt-2">Compassionate healthcare from OPD to OT to recovery.</p></div>
+        <div><h3 class="font-semibold">Unparalleled expertise</h3><p class="text-sm text-slate-600 mt-2">Specialist-owned hospital with national and international faculty experience.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-7xl px-4 py-16">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-3xl font-bold">Our doctors</h2>
+      <a href="doctors/index.html" class="text-teal-800 font-semibold">Meet the team</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="doctors/dr-manpal-singh-narula/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">M</div>
+          <h3 class="mt-3 font-semibold">Dr. Manpal Singh Narula</h3>
+          <p class="text-sm text-teal-800">Orthopaedics, Joints &amp; Spine</p>
+        </a>
+
+        <a href="doctors/dr-gursimran-singh/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">G</div>
+          <h3 class="mt-3 font-semibold">Dr. Gursimran Singh</h3>
+          <p class="text-sm text-teal-800">Minimal Access &amp; Bariatric Surgery</p>
+        </a>
+
+        <a href="doctors/dr-vibha-sharma/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">V</div>
+          <h3 class="mt-3 font-semibold">Dr. Vibha Sharma</h3>
+          <p class="text-sm text-teal-800">Obstetrics &amp; Gynaecology</p>
+        </a>
+
+        <a href="doctors/dr-bimaldeep-singh/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">B</div>
+          <h3 class="mt-3 font-semibold">Dr. Bimaldeep Singh</h3>
+          <p class="text-sm text-teal-800">Dentistry</p>
+        </a>
+
+        <a href="doctors/dr-manoj-sharma/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">M</div>
+          <h3 class="mt-3 font-semibold">Dr. Manoj Sharma</h3>
+          <p class="text-sm text-teal-800">Urology</p>
+        </a>
+
+        <a href="doctors/dr-gaurav-sharma/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">G</div>
+          <h3 class="mt-3 font-semibold">Dr. Gaurav Sharma</h3>
+          <p class="text-sm text-teal-800">Orthopaedics</p>
+        </a>
+
+        <a href="doctors/dr-rp-singh/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">R</div>
+          <h3 class="mt-3 font-semibold">Dr. R. P. Singh</h3>
+          <p class="text-sm text-teal-800">Cardiology</p>
+        </a>
+
+        <a href="doctors/dr-gourav-jain/index.html" class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 hover:ring-teal-300">
+          <div class="h-14 w-14 rounded-full bg-teal-100 text-teal-800 grid place-items-center font-bold">G</div>
+          <h3 class="mt-3 font-semibold">Dr. Gourav Jain</h3>
+          <p class="text-sm text-teal-800">Neurology</p>
+        </a></div>
+  </section>
+  <section class="mx-auto max-w-7xl px-4 pb-8">
+    <h2 class="text-3xl font-bold mb-8">Patients in their own words</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+        <blockquote class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+          <div class="text-amber-500 text-sm font-semibold">4.9 / 5 on Google</div>
+          <p class="mt-3 text-slate-700">“My wife was admitted under Dr Vibha Sharma — excellent doctor and nursing staff. Best faculty in the region.”</p>
+          <footer class="mt-4 text-sm font-medium text-slate-900">Sanju Khatri</footer>
+        </blockquote>
+
+        <blockquote class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+          <div class="text-amber-500 text-sm font-semibold">4.9 / 5 on Google</div>
+          <p class="mt-3 text-slate-700">“My father went for a major hip replacement under Dr M S Narula. His expertise is unmatched. He explained the surgery well and answered every question. Staff like Pooja, the IPD coordinator, were really kind.”</p>
+          <footer class="mt-4 text-sm font-medium text-slate-900">Jasleen Kaur</footer>
+        </blockquote>
+
+        <blockquote class="rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+          <div class="text-amber-500 text-sm font-semibold">4.9 / 5 on Google</div>
+          <p class="mt-3 text-slate-700">“My mother was admitted for gallbladder and stone removal under Dr. Gursimran Singh. Excellent staff, top-notch facilities, and a highly skilled surgeon. A very positive experience.”</p>
+          <footer class="mt-4 text-sm font-medium text-slate-900">Jaspreet Dhaliwal</footer>
+        </blockquote></div>
+  </section>
+
+
+  <footer class="bg-slate-950 text-slate-300 mt-20">
+    <div class="mx-auto max-w-7xl px-4 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <img src="assets/logo.svg" alt="" class="h-10 mb-4 brightness-0 invert">
+        <p class="text-sm leading-relaxed">CHD City Hospital LLP is a 25-bed NABH accredited hospital in Sector 8C, Chandigarh, owned and run by specialist doctors. Values: Expertise, Ethics and Empathy.</p>
+      </div>
+      <div>
+        <h2 class="text-white font-semibold mb-3">Visit</h2>
+        <p class="text-sm">SCO 10-11, Madhya Marg, Sector 8C, Chandigarh 160009</p>
+        <p class="text-sm mt-2"><a href="tel:+919644000067">+91 9644000067</a><br>0172-4006061<br><a href="mailto:info@chdcityhospital.com">info@chdcityhospital.com</a></p>
+        <p class="text-sm mt-2">Open 24×7</p>
+      </div>
+      <div>
+        <h2 class="text-white font-semibold mb-3">Departments</h2>
+        <ul class="text-sm space-y-1"><li><a class="hover:text-white" href="departments/internal-medicine/index.html">Internal Medicine &amp; Rheumatology</a></li>
+<li><a class="hover:text-white" href="departments/bariatric-surgery/index.html">Minimal Access &amp; Bariatric Surgery</a></li>
+<li><a class="hover:text-white" href="departments/orthopaedics/index.html">Orthopaedics, Joints &amp; Spine</a></li>
+<li><a class="hover:text-white" href="departments/obstetrics-gynaecology/index.html">Obstetrics &amp; Gynaecology</a></li>
+<li><a class="hover:text-white" href="departments/urology/index.html">Urology</a></li>
+<li><a class="hover:text-white" href="departments/ent/index.html">ENT</a></li>
+<li><a class="hover:text-white" href="departments/endocrinology/index.html">Endocrinology</a></li>
+<li><a class="hover:text-white" href="departments/radiology/index.html">Radiology</a></li></ul>
+      </div>
+      <div>
+        <h2 class="text-white font-semibold mb-3">Hospital</h2>
+        <ul class="text-sm space-y-1">
+          <li><a class="hover:text-white" href="about/index.html">About us</a></li>
+          <li><a class="hover:text-white" href="quality/index.html">Quality &amp; safety</a></li>
+          <li><a class="hover:text-white" href="faq/index.html">FAQ</a></li>
+          <li><a class="hover:text-white" href="careers/index.html">Careers</a></li>
+          <li><a class="hover:text-white" href="testimonials/index.html">Patient stories</a></li>
+          <li><a class="hover:text-white" href="privacy/index.html">Privacy policy</a></li>
+          <li><a class="hover:text-white" href="appointment/index.html">Request an appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-xs text-slate-500 px-4 py-4 text-center">
+      © 2026 CHD City Hospital · Sector 8C, Chandigarh · Redesigned independently from public website content.
+    </div>
   </footer>
-
+  <a href="https://wa.me/919644000067" class="fixed bottom-5 right-5 z-50 rounded-full bg-emerald-500 text-white shadow-lg px-4 py-3 text-sm font-semibold hover:bg-emerald-600">WhatsApp</a>
   <script>
-    const hour = new Date().getHours();
-    const greeting =
-      hour < 12 ? "Good morning." : hour < 18 ? "Good afternoon." : "Good evening.";
-    document.getElementById("greeting").textContent =
-      greeting + " Thanks for stopping by.";
+    document.querySelectorAll("[data-menu-btn]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("[data-menu]").forEach((m) => m.classList.toggle("hidden"));
+      });
+    });
   </script>
+
 </body>
 </html>
