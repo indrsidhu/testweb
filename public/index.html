@@ -44,8 +44,15 @@
     }
 
     .logo {
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      display: block;
+      height: 32px;
+      width: auto;
     }
 
     nav {
@@ -144,7 +151,9 @@
 </head>
 <body>
   <header>
-    <div class="logo">Hello World</div>
+    <a class="logo" href="./">
+      <img src="logo.svg" alt="MyWeb" width="148" height="36">
+    </a>
     <nav>
       <a href="#about">About</a>
       <a href="#notes">Notes</a>
